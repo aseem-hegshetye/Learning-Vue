@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello Vue</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 </head>
 <body>
 <div id="id_main">
-    <comment
-            v-for="(comment,index) in comments" v-bind:comment="comment"
-            :key="index"
+    <comment-list :comments="comments"
+                  @submit-comment="addNewComment"
     >
-    </comment>
+    </comment-list>
+
+
 </div>
 
 <script src="main.js"></script>
